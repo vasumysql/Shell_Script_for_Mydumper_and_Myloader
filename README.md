@@ -19,3 +19,17 @@ Step - 3
 
 Use the shell script and take backup of required tables and restore.
 
+In linux box / MySQL DB server , you can run the script like this 
+
+chmod +x script.sh
+
+./script.sh
+
+Step - 4
+
+Once Backup is success , please use the below command to restore in target DB by using myloader utility
+
+time myloader -h <target_db_server_name> -u <db_user_name> -p <db_password> --database=<db_name> -t 5 -d /home/backup/tables_backup
+
+---
+Enjoy .....
